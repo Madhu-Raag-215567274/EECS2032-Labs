@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 #IFS='/t'
 counter=0
 newcounter=0
