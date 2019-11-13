@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+main(){
+	int i,j;
+	char k;
+	char print ='*';
+	
+	int ch[4]="a";
+
+	printf("%d",ch);
+
+}

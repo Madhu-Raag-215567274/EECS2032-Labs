@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+#include <sys/types.h>
+
+#include <unistd.h>
+
+main() {
+
+FILE *fp;
+FILE *fps;
+char ch;
+char info[100];
+//int c='7';
+
+fp=fopen("tteesstt.txt","r"); if(fp==NULL) printf("Error opening\n");
+
+lseek(fileno(fp), 26, SEEK_CUR) ;
+while(ch=getc(fputc() {
+
+
+
+//fputc(c,fp);
+
+fclose(fp);
+
+}

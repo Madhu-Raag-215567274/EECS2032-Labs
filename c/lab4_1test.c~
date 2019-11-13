@@ -1,0 +1,33 @@
+ #include<stdio.h>
+ main(){
+ float n,r;
+ //float result;
+ float factOfN =1;
+float factOfR=1;
+float factOfNcr=1;
+ printf("Enter integer n:");
+ scanf("%f",&n); 
+ printf("Enter integer r:");
+ scanf("%f",&r); 
+ int i;
+ for(i=1 ; i<=n; i++){
+ 	factOfN=factOfN*i;
+}
+int j;
+for(j=1 ; j<=r; j++){
+ 	factOfR=factOfR*j;
+}
+int l;
+for(l=1; l<(=n-r); l++){
+ 	factOfNcr=factOfNcr*l;
+}
+
+float result =factOfN/(factOfNcr*factOfR);
+printf("n choose r : %f\n",result);
+
+
+ 
+ 
+ 
+ }
+ 

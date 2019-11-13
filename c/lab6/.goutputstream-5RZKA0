@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main(){
+	int i;
+	i=0;
+	
+	char arr[]="aaaaa";
+	char key[100];
+	printf("enter key: ");
+	
+	
+   scanf ("%[^\n]s", key);
+
+   //fgets(key, 6, stdin); 
+   
+   
+   //printf("%s\n", key); 
+
+	while( i<5 && key[i]!='\0'){
+		arr[i]=key[i];
+		i++;
+	}
+
+	//printf("%s\n",arr);
+	
+	FILE *fdr,*fdw;
+	char ch,fileName[20],output[20];
+	int op;
+	//printf("Enter file name to be read:");
+	//scanf("%s",fileName);
+
+	//printf("Enter the name of output file:");
+	//scanf("%s",output);
+	
+	fdr=fopen("lab62.txt","r");
+	fdw=fopen("lab62enc.txt","w");
+	
+	if(fdr==NULL){
+		
+		exit(0);
+	}
+	
+	int y=0;
+	ch=fgetc(fdr);
+	char exor;
+	while(ch!=EOF){
+		exor= arr^fdr;
+		//op=(int)ch;
+		//op=op+5;
+		put(fdw,"%c",op);
+		ch=fgetc(fdr);
+	}
+	fclose(fdw);
+	fclose(fdr);
+	printf("Encrypted file %s is created..\n",output);
+	return 0;
+
+  
+}
